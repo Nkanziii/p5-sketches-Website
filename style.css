@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    background: none;
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-style: normal;  
+    color:  #ffffff;  
+}
+
+.intro {
+    font-family: "Playfair Display", serif;
+    max-width: 600px;
+    min-height: 200px;
+    font-size: 20px;
+    text-align: center; /* Aligning text position */
+    padding: 30px;
+    border-radius: 12px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    color:  #ffffff;  
+    background-color: #e32cb5;   
+}
+
+.intro:hover {
+    background-color:  #932377; 
+    color:  #ffffff;         /* Changes link color on hover */
+    transform: scale(1.02);      /* Slightly enlarges link for interaction effect */
+  }
+
+/* This is the main wrapper that holds all project cards */
+.projects {
+    display: flex;               /* Turns the section into a flex container (puts children in a row by default) */
+    justify-content: center;     /* Centers the projects horizontally */
+    align-items: flex-start;     /* Aligns projects at the top (instead of stretching them) */
+    gap: 100px;                   /* Adds space between each project */
+    margin-top: 80px;            /* Adds space above the whole section */
+    flex-wrap: wrap;             /* Allows projects to stack on smaller screens instead of overflowing */
+  }
+  
+  /* Each individual project card */
+  .project {
+    display: flex;               /* Makes the card itself a flex container */
+    flex-direction: column;      /* Stacks its children vertically (canvas on top, link below) */
+    align-items: center;        /* Centers the canvas and link horizontally */
+    padding-top: 30px;
+  }
+  
+  /* Targets the canvas element created by p5 */
+  .project canvas {
+    border-radius: 10px;         /* Rounds the corners of the canvas */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Adds a soft shadow for depth */
+  }
+  
+  /* Styles the link below each project */
+  .project-title {
+    margin-top: 40px;            /* Adds space between canvas and link */
+    display: inline-block;
+    padding: 12px 30px;
+    color: #ffffff;
+    background-color: #e32cb5;  
+    text-decoration: none;       /* Removes default underline */
+    font-size: 18px;             /* Makes text slightly bigger */
+    font-weight: 600;            /* Makes text semi-bold */          
+    transition: 0.3s ease;       /* Makes hover changes animate smoothly */
+    border-radius: 15px;
+  }
+  
+  /* What happens when you hover over the link */
+  .project-title:hover {
+    background-color:   #ffffff;
+    color:  #000000;         /* Changes link color on hover */
+    transform: scale(1.05);      /* Slightly enlarges link for interaction effect */
+  }
